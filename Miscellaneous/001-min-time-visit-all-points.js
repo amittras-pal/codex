@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/minimum-time-visiting-all-points/description/
 // On a 2-D plane, there are n points with integer coordinates points[i] = [xi, yi]. 
 // Return the minimum time in seconds to visit all points in the order given by points. 
 // You can move according to the following rules:

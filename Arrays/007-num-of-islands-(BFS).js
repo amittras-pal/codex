@@ -29,6 +29,7 @@
 // 1 <= m, n <= 300
 // grid[i][j] is '0' or '1'.
 
+// =============================================================================
 // Approach: Iterative BFS
 // 1. Initialize a variable to keep track of the number of islands.
 // 2. Create a helper function to perform BFS on the grid.
@@ -40,8 +41,10 @@
 // 8. The BFS function will continue until all connected '1's are visited.
 // 9. The BFS function will return when all connected '1's are marked as visited.
 // 10. The main function will return the total number of islands found.
+// =============================================================================
 // Time Complexity: O(m*n), where m is the number of rows and n is the number of columns in the grid.
 // Space Complexity: O(m*n), where m is the number of rows and n is the number of columns in the grid.
+// =============================================================================
 // Code:
 function numIslands(grid = []) {
     if (!grid?.length) return 0;

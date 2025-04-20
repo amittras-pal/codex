@@ -11,10 +11,14 @@
 // Input: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 // Output: false
 
-
+// =============================================================================
+// Approach: Use a Set to keep track of the elements we have seen so far. 
+// If we encounter an element that is already in the Set, we return true. 
+// If we finish checking all elements without finding duplicates, we return false.
+// =============================================================================
 // Time Complexity: O(n)
 // Space Complexity: O(n)
-// Approach: Use a Set to keep track of the elements we have seen so far. If we encounter an element that is already in the Set, we return true. If we finish checking all elements without finding duplicates, we return false.
+// =============================================================================
 function hasDuplicates(arr) {
     const seen = new Set();
     for (const num of arr) {

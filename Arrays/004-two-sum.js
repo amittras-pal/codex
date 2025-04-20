@@ -22,6 +22,7 @@
 // -10e9 <= target <= 10e9
 
 
+// =============================================================================
 // Approach:
 // 1. Create a hash map to store the indices of the elements.
 // 2. Iterate through the array.
@@ -30,8 +31,10 @@
 // 5. If it exists, return the indices of the current element and the complement.
 // 6. If it doesn't exist, add the current element and its index to the hash map.
 // 7. If no solution is found, return an empty array.
+// =============================================================================
 // Time Complexity: O(n)
 // Space Complexity: O(n)
+// =============================================================================
 function twoSum(nums = [], target = 0) {
     const indexMap = new Map();
     for (const [index, num] of nums.entries()) {

@@ -9,13 +9,16 @@
 // Input: nums = [1,1]
 // Output: [2]
 
+// =============================================================================
 // Note: The input array is modified in place. If you need to keep the original array, make a copy of it before passing it to the function.
 // Approach 1: Using Set
 // 1. Create a set to store the numbers in the array.
 // 2. Iterate through the numbers from 1 to n.
 // 3. Add the missing numbers to the result array if they are not in the set.
+// =============================================================================
 // Time complexity: O(n)
 // Space complexity: O(n) for the set
+// =============================================================================
 function findAllMissingNumbers(arr) {
     const set = new Set(arr);
     const n = arr.length;    
@@ -33,12 +36,15 @@ const nums2 = [1, 1];
 console.log(findAllMissingNumbers(nums1)); // Output: [5, 6]
 console.log(findAllMissingNumbers(nums2)); // Output: [2]
 
+// =============================================================================
 // Approach 2: Using Sorting
 // 1. Iterate through the array and mark the numbers as negative by using their absolute value.
 // 2. Iterate through the array again and check if the number is positive.
 // 3. If it is positive, add the index + 1 to the result array.
+// =============================================================================
 // Time complexity: O(n)
 // Space complexity: O(1) since we are modifying the input array
+// =============================================================================
 function findAllMissingNumbersConstantSpace(arr) {
     const n = arr.length;
     const missing = [];

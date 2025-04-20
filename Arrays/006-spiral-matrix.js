@@ -17,6 +17,7 @@
 // ]
 // Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
+// =============================================================================
 // Approach: 
 // 1. Initialize an empty array to store the result.
 // 2. Check if the matrix is empty. If it is, return the empty array.
@@ -28,9 +29,11 @@
 // 8. Check if there are still columns left to traverse. If so, traverse the left column from bottom to top and add the elements to the result array. Increment the left boundary.
 // 9. Repeat steps 5-8 until all elements have been added to the result array.
 // 10. Return the result array.
+// =============================================================================
 // Time Complexity: O(n)
 // Space Complexity: O(1), since we are using a constant amount of extra space for the boundaries and result array.
 // Note: The result array is not counted in the space complexity since it is the output of the function.
+// =============================================================================
 // Code:
 function spiralMatrix_1(grid = []) {
     if(!grid?.length) return [];
@@ -95,6 +98,7 @@ console.log(spiralMatrix_1([
 console.log("======================");
 
 
+// =============================================================================
 // Approach 2:
 // 1. Initialize an empty array to store the result.
 // 2. Check if the matrix is empty. If it is, return the empty array.
@@ -105,8 +109,10 @@ console.log("======================");
 // 7. Remove the first element of each row of the remaining matrix and add it to the result array.
 // 8. Repeat steps 4-7 until the matrix is empty.
 // 9. Return the result array.
+// =============================================================================
 // Time Complexity: O(n), since all loops are linear and no nesting is done. 
 // Space Complexity: O(1), since we are using a constant amount of extra space for the result array.
+// =============================================================================
 function spiralMatrix_2(grid = []) {
     if(!grid?.length) return [];
     const result = [];

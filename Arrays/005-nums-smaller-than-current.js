@@ -26,6 +26,7 @@
 // Output: [3,2,0,0]
 
 
+// =============================================================================
 // Approach:
 // 1. Create a copy of the original array and sort it.
 // 2. Create a hash map to store the indices of the elements.
@@ -33,8 +34,10 @@
 // 4. Iterate through the original array and for each element, find its index in the sorted array.
 // 5. The index in the sorted array will give the count of smaller elements.
 // 6. Return the counts in an array.
+// =============================================================================
 // Time Complexity: O(n log n)
 // Space Complexity: O(n)
+// =============================================================================
 function smallerNumbersThanCurrent_O_nLogn(nums = []) {
     const sorted = [...nums].sort((a, b) => a - b); // Complexity: O(n log n)
     const indexMap = new Map();
@@ -55,14 +58,17 @@ console.log(smallerNumbersThanCurrent_O_nLogn([7, 7, 7, 7]));
 // Output: [3, 2, 0, 0]
 
 
+// =============================================================================
 // Approach 2:
 // 1. Create a frequency array to count the occurrences of each number.
 // 2. Create a prefix sum array to store the count of smaller elements.
 // 3. Iterate through the frequency array and update the prefix sum array.
 // 4. Create the result array by looking up the prefix sum for each element in the original array.
 // 5. Return the result array.
+// =============================================================================
 // Time Complexity: O(n) ⚠️
 // Space Complexity: O(n)
+// =============================================================================
 function smallerNumbersThanCurrent_O_n(nums = []) {
     const freq = new Array(102).fill(0); // 102 to account for 0 to 100
     const result = new Array(nums.length).fill(0);
