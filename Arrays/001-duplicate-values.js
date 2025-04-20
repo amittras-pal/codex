@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/contains-duplicate/description/
 // Given an array of integers; return true if any interger appears at least twice in the array, and false if every element is distinct.
 
 // Example:
