@@ -39,7 +39,7 @@
 // 8. Update maxLength if the current mountain length is greater than maxLength.
 // 9. Return maxLength at the end of the loop.
 // =============================================================================
-// Time Complexity: O(n)
+// Time Complexity: O(n^2)
 // Space Complexity: O(1)
 // =============================================================================
 /**
@@ -56,12 +56,14 @@ function longestMountain(arr) {
         if ((arr[i - 1] < arr[i]) && (arr[i] > arr[i + 1])) {
             // expand the mountain both sides using 2 pointers.
             let left = i, right = i;
-            while (left >= 0 && arr[left] > arr[left - 1]) {
+            // left pointer expands to the beginning of the array.
+            while (left >= 0 && arr[left] > arr[left - 1]) 
                 left--;
-            }
-            while (right <= arr.length - 1 && arr[right] > arr[right + 1]) {
+
+            // right pointer expands to the end of the array.
+            while (right <= arr.length - 1 && arr[right] > arr[right + 1]) 
                 right++;
-            }
+
 
             mntLength = Math.max(mntLength, right - left + 1);
         }
@@ -73,15 +75,15 @@ function longestMountain(arr) {
 
 // =============================================================================
 // Example usage:
-console.log(longestMountain([2, 1, 4, 7, 3, 2, 5])); 
+console.log(longestMountain([2, 1, 4, 7, 3, 2, 5]));
 // Output: 5, [1,4,7,3,2], subarray of length 5.
-console.log(longestMountain([2, 2, 2])); 
+console.log(longestMountain([2, 2, 2]));
 // Output: 0, all flat.
-console.log(longestMountain([1, 2, 3, 4, 5])); 
+console.log(longestMountain([1, 2, 3, 4, 5]));
 // Output: 0, all increasing, peak can't be at edge.
-console.log(longestMountain([5, 4, 3, 2, 1])); 
+console.log(longestMountain([5, 4, 3, 2, 1]));
 // Output: 0, all decreasing, peak can't be at edge.
-console.log(longestMountain([1, 2, 3, 4, 5, 4, 3, 2, 1])); 
+console.log(longestMountain([1, 2, 3, 4, 5, 4, 3, 2, 1]));
 // Output: 9, full mountain.
 
 // =============================================================================
@@ -93,3 +95,7 @@ const complex = [
 
 console.log(longestMountain(complex));
 // Output: 21
+
+// Additional Optimization:
+// Instead of a for-loop at the top, use a while loop, and skip iteration to the end of the mountain, i.e. the current right pointer index.
+// This will save some operations for the elements right after a peak. 
