@@ -49,8 +49,8 @@ function minLengthSubarraySum(target, nums) {
         total+=nums[_right];
         while(total >= target) {
             result = Math.min(result, _right - _left + 1);
-            total -= nums[left];
-            left++;
+            total -= nums[_left];
+            _left++;
         }
     }
 
