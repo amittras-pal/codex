@@ -14,6 +14,18 @@ Dynamic Programming is a method for solving complex problems by breaking them do
 3. Write the recurrence relation.
 4. Implement the solution.
 
+## Use Cases
+1. **Fibonacci Sequence**: Calculating Fibonacci numbers efficiently using memoization or tabulation.
+2. **Knapsack Problem**: Determining the maximum value that can be obtained with a given weight capacity.
+3. **Longest Common Subsequence (LCS)**: Finding the longest subsequence common to two sequences.
+4. **Longest Increasing Subsequence (LIS)**: Finding the longest subsequence where elements are in increasing order.
+5. **Matrix Chain Multiplication**: Determining the most efficient way to multiply a sequence of matrices.
+6. **Subset Sum Problem**: Checking if a subset with a given sum exists in a set.
+7. **Coin Change Problem**: Finding the minimum number of coins needed to make a given amount.
+8. **Edit Distance**: Calculating the minimum number of operations required to convert one string into another.
+9. **Partition Problem**: Dividing a set into two subsets with equal sum.
+10. **Shortest Path Problems**: Solving problems like Floyd-Warshall or Bellman-Ford for graph shortest paths.
+
 ---
 
 ## Example 1: Fibonacci Numbers
